@@ -1,0 +1,23 @@
+name: Hola Mundo Python File
+
+on:
+  push:
+    branches:
+      - aprendiendo-github-actions
+
+jobs:
+  execute-python-file:
+    name: Execute Python File
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2 
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x 
+
+    - name: Execute Python File
+      run: python main.py
