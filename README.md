@@ -20,7 +20,7 @@ _Aprende los conceptos básicos para crear tu primer flujo de CI/CD para tus pro
   Do not use quotes on the <details> tag attributes.
 -->
 
-<details id=0 open>
+<details id=0>
 <summary><h2>Bienvenido</h2></summary>
 
 ¡Bienvenido al Curso Básico de GitHub Actions de Platzi! en este curso aprenderás a realizar flujos de Integración y Despliegue Continúo (CI/CD) para tus proyectos personales, así como automatizar cualquier proceso que que te ayude a impulsar tu flujo de trabajo :rocket:.
@@ -131,7 +131,7 @@ Primero, aprenderemos los conceptos básicos de GitHub Actions
   TBD-step-2-notes.
 -->
 
-<details id=2>
+<details id=2 open>
 <summary><h2>Paso 2: Conoce los principales Triggers</h2></summary>
 
 _¡Creaste tu primer Workflow! :tada:_
