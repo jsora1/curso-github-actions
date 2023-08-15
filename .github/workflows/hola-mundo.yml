@@ -1,23 +1,13 @@
-name: Python File Execution
-
-on:
-  push:
-    branches:
-      - aprendiendo-github-actions
-
+name: Aprendiendo GitHub Actions
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on:  [push]
 jobs:
-  execute-python-file:
-    name: Execute Python File
+  hola-mundo:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2 
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.x 
-
-    - name: Execute Python File
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Definir variable
+      run: echi "USERNAME=${{github.actor}}">>$GITHUB_ENV
+    - name: Correr script
       run: python main.py
