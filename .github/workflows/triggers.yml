@@ -2,8 +2,8 @@ name: Triggers
 run-name: ¡Estoy aprendiendo GitHub Actions Triggers!
 on:
   push:
-		branches:
-			- 'releases/**'
+	  branches:
+		  - 'releases/**'
 		paths:
 			- '**.py'
 
@@ -16,35 +16,35 @@ on:
 			- '**.py'
 
 	workflow_dispatch:
-		inputs:
-			lenguaje_favorito:	
-				description: 'Lenguajes favoritos'
+	  inputs:
+		  lenguaje_favorito:	
+			  description: 'Lenguajes favoritos'
         defaault: Python
 				required: true
 				type: choice
         options:
-        - Python
-        - JavaScript
-        - Go
+          - Python
+          - JavaScript
+          - Go
   jobs:
-  hola-mundo-manual-triggers:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Definir nombre
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-      - name: Definir lenguaje
-        run: echo "LENGUAJE=${{ inputs.lenguaje_favorito}}" >> $GITHUB_ENV
-      - name: Correr script
-        run: python hola_lenguaje.py
+    hola-mundo-manual-triggers:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Definir nombre
+          run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+        - name: Definir lenguaje
+          run: echo "LENGUAJE=${{ inputs.lenguaje_favorito}}" >> $GITHUB_ENV
+        - name: Correr script
+          run: python hola_lenguaje.py
   
-  hola-mundo-triggers:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Definir variable
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-      - name: Correr script
-        run: python main.py
+    hola-mundo-triggers:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Definir variable
+          run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+        - name: Correr script
+          run: python main.py
