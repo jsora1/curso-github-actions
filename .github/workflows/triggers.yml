@@ -18,7 +18,7 @@ on:
 	workflow_dispatch:
 		inputs:
 			lenguaje_favorito:	
-				description: 'Lenguaje favorito'
+				description: 'Lenguajes favoritos'
         defaault: Python
 				required: true
 				type: choice
