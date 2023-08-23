@@ -27,7 +27,7 @@ on:
         - JavaScript
         - Go
   jobs:
-  hola-mundo-manual:
+  hola-mundo-manual-triggers:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,7 +39,7 @@ on:
       - name: Correr script
         run: python hola_lenguaje.py
   
-  hola-mundo:
+  hola-mundo-triggers:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
